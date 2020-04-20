@@ -1,3 +1,4 @@
+let buy_price,min_pred, max_pred;
 // reference mikebryant/ac-nh-turnip-prices
 const PATTERN = {
   FLUCTUATING: 0,
@@ -618,12 +619,14 @@ function get_probabilities(possibilities, previous_pattern) {
 }
 
 function analyze_possibilities(sell_prices, first_buy, previous_pattern) {
-  generated_possibilities = Array.from(generate_possibilities(sell_prices, first_buy));
-  generated_possibilities = get_probabilities(generated_possibilities, previous_pattern);
+  let generated_possibilities = Array.from(generate_possibilities(sell_prices, first_buy));
+  if(previous_pattern) {
+    generated_possibilities = get_probabilities(generated_possibilities, previous_pattern);
+  }
 
-  global_min_max = [];
+  let global_min_max = [];
   for (var day = 0; day < 14; day++) {
-    prices = {
+    let prices = {
       min: 999,
       max: 0,
     }

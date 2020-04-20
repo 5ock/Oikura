@@ -102,7 +102,6 @@ export default {
     }
   },
   mounted() {
-    test();
   },
   methods:{
     clearData() {
@@ -125,13 +124,24 @@ export default {
         sellPrice.push(this.sellPrice[i]);
       }
 
-      this.$emit('test', 123);
+      let analyzeResult = analyze_possibilities(sellPrice);
+
+      console.log(analyzeResult);
+
+      // this.$emit('test', 123);
     }
   }
 }
 </script>
 
 <style scoped>
+input {
+  border-radius: 5px;
+  font-size: 18px;
+}
+input:focus {
+  outline:none;
+}
 .oikura {
   width: 900px;
   margin: 0 auto;
@@ -141,7 +151,7 @@ export default {
   border-radius: 10px;
 }
 .block_buyPrice { 
-  border-radius: 5px;
+  border-radius: 10px;
   width:400px;
   margin: 0 auto 20px;
   padding: 10px 0;
@@ -162,6 +172,9 @@ export default {
   text-align: center;
   width:120px;
   margin: 0 13px;
+  padding: 10px 0 10px;
+  background-color: #F0DDD1;
+  border-radius: 10px;
 }
 .inputStyle {
   width:300px;

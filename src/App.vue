@@ -27,7 +27,5 @@ export default {
 </script>
 
 <style scope>
-body {
-  background-color:#rgb(240, 221, 209);
-}
+
 </style>
