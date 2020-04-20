@@ -121,7 +121,11 @@ export default {
 
       let sellPrice = [this.buyPrice, this.buyPrice];
       for(let i in this.sellPrice) {
-        sellPrice.push(this.sellPrice[i]);
+        if(!isNaN(this.sellPrice)) {
+          sellPrice.push(this.sellPrice[i]);
+        } else {
+          sellPrice.push(NaN);
+        }
       }
 
       let analyzeResult = analyze_possibilities(sellPrice);

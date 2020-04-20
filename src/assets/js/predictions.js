@@ -300,8 +300,8 @@ function* generate_pattern_1_with_peak(given_prices, peak_start) {
   }
 
   // Now each day is independent of next
-  min_randoms = [0.9, 1.4, 2.0, 1.4, 0.9, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
-  max_randoms = [1.4, 2.0, 6.0, 2.0, 1.4, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]
+  let min_randoms = [0.9, 1.4, 2.0, 1.4, 0.9, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4]
+  let max_randoms = [1.4, 2.0, 6.0, 2.0, 1.4, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9]
   for (var i = peak_start; i < 14; i++) {
     min_pred = Math.floor(min_randoms[i - peak_start] * buy_price);
     max_pred = Math.ceil(max_randoms[i - peak_start] * buy_price);
