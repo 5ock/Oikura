@@ -110,22 +110,14 @@ export default {
       }
     },
     calculatorData() {
-      if(this.buyPrice == "" || this.sellPrice.sellMon_AM == "") {
-        alert(this.$t("Please enter 'Buy Price' and 'Mon AM Price'"));
-        return;
-      }
-
       for(let i in this.predictionPrice) {
         this.predictionPrice[i] = '';
       }
 
       let sellPrice = [this.buyPrice, this.buyPrice];
       for(let i in this.sellPrice) {
-        if(!isNaN(this.sellPrice)) {
-          sellPrice.push(this.sellPrice[i]);
-        } else {
-          sellPrice.push(NaN);
-        }
+        let price = this.sellPrice[i] ? this.sellPrice[i] : NaN;
+        sellPrice.push(price);
       }
 
       let analyzeResult = analyze_possibilities(sellPrice);
@@ -139,59 +131,4 @@ export default {
 </script>
 
 <style scoped>
-input {
-  border-radius: 5px;
-  font-size: 18px;
-}
-input:focus {
-  outline:none;
-}
-.oikura {
-  width: 900px;
-  margin: 0 auto;
-  background-color: #0d33;
-  border: #0d33 1px solid;
-  padding-top:20px;
-  border-radius: 10px;
-}
-.block_buyPrice { 
-  border-radius: 10px;
-  width:400px;
-  margin: 0 auto 20px;
-  padding: 10px 0;
-  text-align: center;
-}
-.block_btn {
-  margin: 0 auto;
-  width: 500px;
-  text-align:center;
-}
-.btn {
-  margin: 20px 20px;
-  width: 120px;
-  height: 30px;
-}
-.day {
-  display: inline-block;
-  text-align: center;
-  width:120px;
-  margin: 0 13px;
-  padding: 10px 0 10px;
-  background-color: #F0DDD1;
-  border-radius: 10px;
-}
-.inputStyle {
-  width:300px;
-  height:30px;
-  padding: 0 5px;
-  margin-top:5px;
-  text-align: center;
-}
-.inputStyle_week {
-  width:80px;
-  height:25px;
-  padding: 0 5px;
-  text-align: center;
-  margin-bottom: 8px;
-}
 </style>

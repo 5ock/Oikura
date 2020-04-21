@@ -23,12 +23,19 @@ export default {
 </script>
 
 <style scope>
-.titleBar {
-  width: 100%;
-  height: 50px;
-  text-height:50px;
+.headerBar {
+  background-color: #fff;
+  width:900px;
+  margin: 20px auto 20px;
   text-align: center;
-  
+  border-radius: 10px;
+}
+.titleBar {
+  margin-top: 30px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;  
 }
 .lang-nav {
   position: fixed;
