@@ -31,7 +31,7 @@ button:active {
 }
 .oikura {
     width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     background-color: #fff;
     border: #0d33 1px solid;
     padding-top:20px;
