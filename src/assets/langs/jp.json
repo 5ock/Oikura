@@ -11,5 +11,9 @@
     "AM": "午前",
     "PM": "午後",
     "Calculator": "スタート",
-    "Clear Data": "データを削除"
+    "Clear Data": "データを削除",
+    "patterns.fluctuating": "通常型",
+    "patterns.small-spike": "ゆるやかフィーバー型",
+    "patterns.large-spike": "一気にフィーバー型",
+    "patterns.decreasing": "ジリ貧型"
 }

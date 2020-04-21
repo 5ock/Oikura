@@ -11,5 +11,10 @@
     "AM": "上午",
     "PM": "下午",
     "Calculator": "開始計算",
-    "Clear Data": "清除資料"
+    "Clear Data": "清除資料",
+    "patterns.fluctuating": "波型",
+    "patterns.small-spike": "四期型",
+    "patterns.large-spike": "三期型",
+    "patterns.decreasing": "遞減型"
 }
+

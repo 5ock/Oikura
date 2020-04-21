@@ -11,5 +11,9 @@
     "AM": "AM",
     "PM": "PM",
     "Calculator": "Calculator",
-    "Clear Data": "Clear Data"
+    "Clear Data": "Clear Data",
+    "patterns.fluctuating": "Fluctuating",
+    "patterns.small-spike": "Small Spike",
+    "patterns.large-spike": "Large Spike",
+    "patterns.decreasing": "Decreasing"
 }
