@@ -1,7 +1,8 @@
 {
     "test": "テスト",
-    "Turnip Calculator": "カブ値段計算機",
+    "Turnip Calculator": "カブ予測ツール",
     "Buy Price": "購入価格",
+    "Sun": "日",
     "Mon": "月",
     "Tue": "火",
     "Wed": "水",
@@ -10,10 +11,18 @@
     "Sat": "土",
     "AM": "午前",
     "PM": "午後",
+    "No": "いいえ",
+    "Yes": "はい",
+    "First Time Buy": "初めて買う",
+    "Previous Pattern": "先週のパターン",
+    "Forget": "忘れた",
+    "Pattern": "パターン",
+    "Probability": "確率",
+    "Detail": "細部",
     "Calculator": "スタート",
     "Clear Data": "データを削除",
-    "patterns.fluctuating": "通常型",
-    "patterns.small-spike": "ゆるやかフィーバー型",
-    "patterns.large-spike": "一気にフィーバー型",
-    "patterns.decreasing": "ジリ貧型"
+    "fluctuating": "通常型",
+    "small-spike": "4期型",
+    "large-spike": "3期型",
+    "decreasing": "ジリ貧型"
 }

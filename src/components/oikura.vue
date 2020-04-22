@@ -1,6 +1,26 @@
 <template>
   <div class="oikura">
-    <div class="block_buyPrice">
+    <div class="oikura_block">
+      <div class="textCenter" style="margin-bottom:5px;">{{ $t("First Time Buy") }}</div>
+      <label for="firstNo" class="radioStyle" :class="{ isSelect: firstBuy=='' }">{{ $t("No") }}</label>
+      <input id="firstNo" type="radio" value="" v-model="firstBuy" style="display:none">
+      <label for="firstYes" class="radioStyle" :class="{ isSelect: firstBuy=='1' }">{{ $t("Yes") }}</label>
+      <input id="firstYes" type="radio" value="1" v-model="firstBuy" style="display:none">
+    </div>
+    <div class="oikura_block">
+      <div class="textCenter" style="margin-bottom:5px;">{{ $t("Previous Pattern") }}</div>
+      <label for="Forget" class="radioStyle increaseWidth" :class="{ isSelect: maePattern=='-1' }">{{ $t("Forget") }}</label>
+      <input id="Forget" type="radio" value="-1" v-model="maePattern" style="display:none">
+      <label for="fluctuating" class="radioStyle increaseWidth" :class="{ isSelect: maePattern=='0' }">{{ $t("fluctuating") }}</label>
+      <input id="fluctuating" type="radio" value="0" v-model="maePattern" style="display:none">
+      <label for="large" class="radioStyle increaseWidth" :class="{ isSelect: maePattern=='1' }">{{ $t("large-spike") }}</label>
+      <input id="large" type="radio" value="1" v-model="maePattern" style="display:none">
+      <label for="decreasing" class="radioStyle increaseWidth" :class="{ isSelect: maePattern=='2' }">{{ $t("decreasing") }}</label>
+      <input id="decreasing" type="radio" value="2" v-model="maePattern" style="display:none">
+      <label for="small" class="radioStyle increaseWidth" :class="{ isSelect: maePattern=='3' }">{{ $t("small-spike") }}</label>
+      <input id="small" type="radio" value="3" v-model="maePattern" style="display:none">
+    </div>
+    <div class="oikura_block">
       <div class="textCenter">{{ $t("Buy Price") }}</div>
       <input type="text" class="inputStyle" v-model="buyPrice">
     </div>
@@ -50,15 +70,15 @@
 </template>
 
 <script>
-// https://forum.gamer.com.tw/C.php?bsn=7287&snA=3935
-// https://forum.gamer.com.tw/C.php?bsn=7287&snA=4238
 import analyze_possibilities from '../assets/js/predictions';
 
 export default {
   name: 'oikura',
   data () {
     return {
+      firstBuy: "",
       buyPrice: "",
+      maePattern: "-1",
       sellPrice: {
         sellMon_AM: "",
         sellMon_PM: "",
@@ -73,62 +93,52 @@ export default {
         sellSat_AM: "",
         sellSat_PM: "",
       },
-      predictionPrice: {
-        mon_AM_high: "",
-        mon_AM_low: "",
-        mon_PM_high: "",
-        mon_PM_low: "",
-        tue_AM_high: "",
-        tue_AM_low: "",
-        tue_PM_high: "",
-        tue_PM_low: "",
-        wed_AM_high: "",
-        wed_AM_low: "",
-        wed_PM_high: "",
-        wed_PM_low: "",
-        thu_AM_high: "",
-        thu_AM_low: "",
-        thu_PM_high: "",
-        thu_PM_low: "",
-        fri_AM_high: "",
-        fri_AM_low: "",
-        fri_PM_high: "",
-        fri_PM_low: "",
-        sat_AM_high: "",
-        sat_AM_low: "",
-        sat_PM_high: "",
-        sat_PM_low: "",
-      }
     }
   },
   mounted() {
   },
   methods:{
     clearData() {
-      for(let i in this.price) {
-        this.price[i] = "";
+      this.buyPrice = "";
+      for(let i in this.sellPrice) {
+        this.sellPrice[i] = "";
       }
+      this.$emit('clearData');
     },
     calculatorData() {
-      for(let i in this.predictionPrice) {
-        this.predictionPrice[i] = '';
+      if(this.buyPrice == '') {
+        return;
       }
-
       let sellPrice = [this.buyPrice, this.buyPrice];
       for(let i in this.sellPrice) {
         let price = this.sellPrice[i] ? this.sellPrice[i] : NaN;
         sellPrice.push(price);
       }
 
-      let analyzeResult = analyze_possibilities(sellPrice);
+      let analyzeResult = analyze_possibilities(sellPrice, this.firstBuy, this.maePattern);
 
-      console.log(analyzeResult);
-
-      // this.$emit('test', 123);
+      this.$emit('analyzeResult', analyzeResult);
     }
   }
 }
 </script>
 
 <style scoped>
+.radioStyle {
+  border-radius: 10px;
+  display: inline-block;
+  width: 50px;
+  border: 1px solid #ccc;
+  color: #000;
+  cursor: pointer;
+  padding: 1px 5px;
+  font-size: 16px;
+}
+.radioStyle.increaseWidth {
+  width: 100px;
+}
+.isSelect {
+  background-color: #1d6a96;
+  color: #fff;
+}
 </style>

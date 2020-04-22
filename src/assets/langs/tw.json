@@ -2,6 +2,7 @@
     "test": "測試",
     "Turnip Calculator": "大頭菜計算機",
     "Buy Price": "購入價格",
+    "Sun": "周日",
     "Mon": "週一",
     "Tue": "週二",
     "Wed": "週三",
@@ -10,11 +11,19 @@
     "Sat": "週六",
     "AM": "上午",
     "PM": "下午",
+    "No": "是",
+    "Yes": "否",
+    "First Time Buy": "第一次購買",
+    "Forget": "忘了",
+    "Previous Pattern": "上周模式",
     "Calculator": "開始計算",
     "Clear Data": "清除資料",
-    "patterns.fluctuating": "波型",
-    "patterns.small-spike": "四期型",
-    "patterns.large-spike": "三期型",
-    "patterns.decreasing": "遞減型"
+    "Pattern": "模式",
+    "Detial": "詳細資料",
+    "Probability": "機率",
+    "fluctuating": "波型",
+    "small-spike": "四期型",
+    "large-spike": "三期型",
+    "decreasing": "遞減型"
 }
 

@@ -38,7 +38,11 @@ button:active {
     border-radius: 10px;
     -webkit-border-radius: 10px;
 }
-.block_buyPrice { 
+.blockTitle {
+    width: 100px;
+    margin: 0 auto;
+}
+.oikura_block { 
     font-size: 20px;
     border-radius: 10px;
     -webkit-border-radius: 10px;

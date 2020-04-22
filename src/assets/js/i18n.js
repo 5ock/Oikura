@@ -5,7 +5,7 @@ Vue.use(VueI18N);
 
 function getLang() {
     let langList = ['en-us', 'zh-tw', 'ja-jp'];
-    let presetLang = 'zh-tw';
+    let presetLang = 'en-us';
     let browserLang = null;
 
     // check browser language
@@ -16,11 +16,11 @@ function getLang() {
     }
     browserLang = browserLang.toLowerCase();
 
-    for(let i in langList) {
-        if(browserLang == langList[i]) {
-            presetLang = browserLang;
-        }
-    }
+    // for(let i in langList) {
+    //     if(browserLang == langList[i]) {
+    //         presetLang = browserLang;
+    //     }
+    // }
 
     return presetLang;
 }

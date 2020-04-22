@@ -41,7 +41,7 @@ export default {
   position: fixed;
   right: 50px;
   top: 5px;
-
+  z-index: 999;
 }
 .langItem {
   font-size: 16px;
