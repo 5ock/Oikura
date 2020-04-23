@@ -16,11 +16,11 @@ function getLang() {
     }
     browserLang = browserLang.toLowerCase();
 
-    // for(let i in langList) {
-    //     if(browserLang == langList[i]) {
-    //         presetLang = browserLang;
-    //     }
-    // }
+    for(let i in langList) {
+        if(browserLang == langList[i]) {
+            presetLang = browserLang;
+        }
+    }
 
     return presetLang;
 }

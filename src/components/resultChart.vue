@@ -35,7 +35,7 @@ export default {
 
       pChartSettings: {type:'pie'},
       pData: {
-        columns: [this.$t('Pattern'), this.$t('Probability')],
+        columns: ['Pattern', 'Probability'],
         rows: []
       },
       showPie: false,
