@@ -25,7 +25,7 @@ export default {
 <style scope>
 .headerBar {
   background-color: #fff;
-  width:900px;
+  width:1080px;
   margin: 20px auto 20px;
   text-align: center;
   border-radius: 10px;

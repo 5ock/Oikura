@@ -19,11 +19,15 @@
     "Calculator": "開始計算",
     "Clear Data": "清除資料",
     "Pattern": "模式",
-    "Detial": "詳細資料",
+    "Detail": "詳細資料",
     "Probability": "機率",
     "fluctuating": "波型",
     "small-spike": "四期型",
     "large-spike": "三期型",
-    "decreasing": "遞減型"
+    "decreasing": "遞減型",
+    "predict result": "預測結果",
+    "Total Probability": "總機率",
+    "max": "最大值",
+    "min": "最小值"
 }
 

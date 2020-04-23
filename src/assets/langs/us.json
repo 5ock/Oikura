@@ -18,11 +18,16 @@
     "First Time Buy": "First Time Buy",
     "Previous Pattern": "Previous Pattern",
     "Probability": "Probability",
-    "Detial": "Detial",
+    "Detail": "Detail",
     "Calculator": "Calculator",
     "Clear Data": "Clear Data",
     "fluctuating": "Fluctuating",
     "small-spike": "Small Spike",
     "large-spike": "Large Spike",
-    "decreasing": "Decreasing"
+    "decreasing": "Decreasing",
+    "predict result": "Predict Result",
+    "Total Probability": "Total Probability",
+    "max": "MAX",
+    "min": "MIN"
+    
 }

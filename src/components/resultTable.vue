@@ -1,11 +1,12 @@
 <template>
-  <div class="oikura" v-show="tabelData.length>0">
+  <div class="oikura">
     <div class="blockTitle"><h2>{{ $t("Detail") }}</h2></div>
-    <div class="block_table">
+    <div class="block_table"  v-if="tabelData.length>0">
       <table>
         <thead>
           <tr>
             <th rowspan="2">{{ $t('Pattern') }}</th>
+            <th rowspan="2">{{ $t('Total Probability') }}</th>
             <th rowspan="2">{{ $t('Probability') }}</th>
             <th colspan="2">{{ $t('Mon') }}</th>
             <th colspan="2">{{ $t('Tue') }}</th>
@@ -32,6 +33,7 @@
         <tbody>
           <tr v-for="(item, index) in tabelData">
             <td>{{ $t(item.pattern) }}</td>
+            <td>{{ item.total_Probability }}%</td>
             <td>{{ item.Probability }}%</td>
             <td>{{ item.price[0].am }}</td>
             <td>{{ item.price[0].pm }}</td>
@@ -49,6 +51,7 @@
         </tbody>
       </table>
     </div>
+    <div  v-else>暫無資料</div>
  </div>
 </template>
 

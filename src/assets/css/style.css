@@ -17,7 +17,7 @@ input {
     text-align: center;
 }
 .inputStyle_week {
-    width:80px;
+    width:120px;
     height:25px;
     padding: 0 5px;
     text-align: center;
@@ -30,7 +30,7 @@ button:active {
     background-color: #666;
 }
 .oikura {
-    width: 900px;
+    width: 1080px;
     margin: 0 auto 20px;
     background-color: #fff;
     border: #0d33 1px solid;
@@ -39,8 +39,9 @@ button:active {
     -webkit-border-radius: 10px;
 }
 .blockTitle {
-    width: 100px;
+    width: 200px;
     margin: 0 auto;
+    text-align: center;
 }
 .oikura_block { 
     font-size: 20px;
@@ -57,9 +58,10 @@ button:active {
     text-align:center;
 }
 .btn {
+    font-size: 16px;
     margin: 20px 20px;
     width: 120px;
-    height: 30px;
+    height: 40px;
     border:0;
     background-color:#1d6a96;
     color:#fff;
@@ -72,8 +74,8 @@ button:active {
 .day {
     display: inline-block;
     text-align: center;
-    width:120px;
-    margin: 0 13px;
+    width:144px;
+    margin: 0 15.6px;
     padding: 10px 0 10px;
     border-radius: 10px;
     -webkit-border-radius: 10px;

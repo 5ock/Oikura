@@ -24,7 +24,7 @@
       <div class="textCenter">{{ $t("Buy Price") }}</div>
       <input type="text" class="inputStyle" v-model="buyPrice">
     </div>
-    <div class="block_weekAM">
+    <div class="block_week">
       <div class="day">
         <div class="textCenter">{{ $t("Mon") }} - {{ $t("AM") }}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellMon_AM">
@@ -127,7 +127,9 @@ export default {
 .radioStyle {
   border-radius: 10px;
   display: inline-block;
-  width: 50px;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
   border: 1px solid #ccc;
   color: #000;
   cursor: pointer;

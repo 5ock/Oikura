@@ -18,11 +18,15 @@
     "Forget": "忘れた",
     "Pattern": "パターン",
     "Probability": "確率",
-    "Detail": "細部",
+    "Detial": "細部",
     "Calculator": "スタート",
     "Clear Data": "データを削除",
     "fluctuating": "通常型",
     "small-spike": "4期型",
     "large-spike": "3期型",
-    "decreasing": "ジリ貧型"
+    "decreasing": "ジリ貧型",
+    "predict result": "結果",
+    "Total Probability": "総確率",
+    "max": "最高",
+    "min": "最小"
 }
