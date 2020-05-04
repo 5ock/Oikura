@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import analyze_possibilities from '../assets/js/predictions';
+import Predictor from '../assets/js/predictions';
 
 export default {
   name: 'oikura',
@@ -115,9 +115,9 @@ export default {
         sellPrice.push(price);
       }
 
-      let analyzeResult = analyze_possibilities(sellPrice, this.firstBuy, this.maePattern);
+      let result = new Predictor(sellPrice, this.firstBuy, this.maePattern);
 
-      this.$emit('analyzeResult', analyzeResult);
+      this.$emit('analyzeResult', result.analyze_possibilities());
     }
   }
 }
