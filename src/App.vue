@@ -1,9 +1,15 @@
 <template>
   <div id="app">
+    <div class="lang-nav">
+      <a class="langItem" @click="switchLang('en-us')">English</a> /
+      <a class="langItem" @click="switchLang('ja-jp')">日本語</a> /
+      <a class="langItem" @click="switchLang('zh-tw')">中文</a>
+    </div>
     <HeaderBar />
     <Oikura @analyzeResult="analyzeResult" @clearData="clearData" />
     <ResultChart :pieData="pieData" :lineData="lineData" />
     <ResultTable :tabelData="tabelData" />
+    <div class="oikura footer">{{$t ('Get Rich Together') }} - 2020/05/05</div>
   </div>
 </template>
 

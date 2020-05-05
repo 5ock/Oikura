@@ -1,5 +1,5 @@
 <template>
-  <div class="oikura">
+  <div class="oikura resultTable">
     <div class="blockTitle"><h2>{{ $t("Detail") }}</h2></div>
     <div class="block_table"  v-if="tabelData.length>0">
       <table>
@@ -51,7 +51,7 @@
         </tbody>
       </table>
     </div>
-    <div  v-else>暫無資料</div>
+    <div  v-else>no data</div>
  </div>
 </template>
 
@@ -73,19 +73,4 @@ export default {
 </script>
 
 <style scope>
-table {
-  text-align: center;
-  margin: 0;
-  min-width:100%;
-  /* border-collapse:collapse; */
-  border-spacing:1;
-}
-thead {
-  background-color: orange;
-}
-.block_table {
-  max-height: 400px;
-  overflow: auto;
-  margin-bottom: 20px; 
-}
 </style>

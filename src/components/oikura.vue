@@ -26,40 +26,64 @@
     </div>
     <div class="block_week">
       <div class="day">
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Mon") }} - {{ $t("AM") }}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellMon_AM">
+        </div>
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Mon") }} - {{ $t("PM")}}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellMon_PM">
+        </div>
       </div>
       <div class="day">
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Tue") }} - {{ $t("AM") }}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellTue_AM">
+        </div>
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Tue") }} - {{ $t("PM")}}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellTue_PM">
+        </div>
       </div>
       <div class="day">
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Wed") }} - {{ $t("AM") }}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellWed_AM">
+        </div>
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Wed") }} - {{ $t("PM")}}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellWed_PM">
+        </div>
       </div>
       <div class="day">
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Thu") }} - {{ $t("AM") }}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellThu_AM">
+        </div>
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Thu") }} - {{ $t("PM")}}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellThu_PM">
+        </div>
       </div>
       <div class="day">
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Fri") }} - {{ $t("AM") }}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellFri_AM">
+        </div>
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Fri") }} - {{ $t("PM")}}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellFri_PM">
+        </div>
       </div>
       <div class="day">
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Sat") }} - {{ $t("AM") }}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellSat_AM">
+        </div>
+        <div class="m_day_block">
         <div class="textCenter">{{ $t("Sat") }} - {{ $t("PM")}}</div>
         <input type="text" class="inputStyle_week" v-model="sellPrice.sellSat_PM">
+        </div>
       </div>
     </div>
     <div class="block_btn">
@@ -124,23 +148,4 @@ export default {
 </script>
 
 <style scoped>
-.radioStyle {
-  border-radius: 10px;
-  display: inline-block;
-  width: 60px;
-  height: 25px;
-  line-height: 25px;
-  border: 1px solid #ccc;
-  color: #000;
-  cursor: pointer;
-  padding: 1px 5px;
-  font-size: 16px;
-}
-.radioStyle.increaseWidth {
-  width: 100px;
-}
-.isSelect {
-  background-color: #1d6a96;
-  color: #fff;
-}
 </style>

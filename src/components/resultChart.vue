@@ -2,11 +2,11 @@
   <div class="oikura">
     <div class="blockTitle"><h2>{{ $t("predict result") }}</h2></div>
     <!-- <div class="block_chart"> -->
-    <div style="width: 538px; display:inline-block">
+    <div class="chart_block">
       <ve-pie v-if="showPie" :data="pData" :settings="pChartSettings" ></ve-pie>
     </div>
 
-    <div style="width: 538px; display:inline-block">
+    <div class="chart_block">
       <ve-line :data="lData" :settings="chartSettings" :extend="chartExtend"></ve-line>
     </div>
  </div>
