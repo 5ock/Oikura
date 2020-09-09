@@ -1,8 +1,8 @@
 # 動物森友會 - 救救我的大頭菜 之 我也想發大財
 
-<font size=5>[Demo](https://5ock.github.io/Oikura/)</font>
+[Demo](https://5ock.github.io/Oikura/)
 
-### 大頭菜攻略 - 使用說明
+### 大頭菜計算機 - 使用說明
 > 如果是第一次購買通常為四期型，第二周之後才有機會出現最賺錢的三期型
  
 step 1. 選擇是否第一次購買大頭菜
